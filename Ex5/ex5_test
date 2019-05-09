@@ -1,0 +1,5 @@
+#!/bin/bash
+sml < ex5_test.sml > myout
+sed -n '/start/,$p' myout > tmp
+diff tmp ex5_exp
+rm -f tmp
